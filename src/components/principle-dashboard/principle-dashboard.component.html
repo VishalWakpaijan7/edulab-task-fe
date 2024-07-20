@@ -1,0 +1,8 @@
+<h3 class="heading">Hello, Principle</h3>
+<div class="button-wrapper">
+    <button mat-flat-button (click)="generateIDCardHandler()" [disabled]="disableRegButton">Generate ID Cards</button>
+    <button mat-flat-button (click)="downloadIDCardHandler()" [disabled]="disableDownButton">Download ID Cards</button>
+</div>
+<div class="spinner-wrapper" *ngIf="isLoader">
+    <mat-spinner></mat-spinner>
+</div>
