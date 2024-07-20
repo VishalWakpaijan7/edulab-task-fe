@@ -14,6 +14,9 @@ export class AuthInterceptor implements HttpInterceptor {
           this.snackBar.open(`404 Error`, 'OK');
         } else if (error.status == 500) {
           this.snackBar.open(`Internal Server Error`, 'OK');
+        } else if (!error.ok) {
+          console.log('tes',error);
+          this.snackBar.open(`Internal Server Error`, 'OK');
         }
         return throwError(error);
       }),
